@@ -539,3 +539,43 @@ footer p {
   padding: 1rem 2rem;
   backdrop-filter: blur(6px);
 }
+
+/* GLASSMORPHISM EFFECT FOR EXPERIENCE + SKILLS SECTIONS */
+.details-container {
+  background: rgba(0, 0, 0, 0.35); /* semi-transparent dark glass */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Make inner text readable */
+.details-container h2,
+.details-container h3,
+.details-container p,
+.details-container li {
+  color: #f1f1f1;
+}
+
+.details-container ul {
+  text-align: left;
+  margin-top: 1rem;
+  line-height: 1.6;
+  padding-left: 1.5rem;
+}
+
+/* Specific tweak for Skills section to center text */
+#skills .details-container p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
