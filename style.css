@@ -1,38 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-/* ------------------------------- */
-/* BASE & GLOBAL STYLES */
-/* ------------------------------- */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: #fff;
-  color: #000;
-}
-
 p {
   color: rgb(85, 85, 85);
-  line-height: 1.6;
 }
 
-/* Smooth transition for interactive elements */
+/* TRANSITION */
 a,
 .btn {
   transition: all 300ms ease;
 }
 
-/* ------------------------------- */
-/* NAVIGATION */
-/* ------------------------------- */
+/* DESKTOP NAV */
 nav,
 .nav-links {
   display: flex;
@@ -53,6 +45,7 @@ nav {
 a {
   color: black;
   text-decoration: none;
+  text-decoration-color: white;
 }
 
 a:hover {
@@ -71,9 +64,7 @@ a:hover {
   cursor: default;
 }
 
-/* ------------------------------- */
 /* HAMBURGER MENU */
-/* ------------------------------- */
 #hamburger-nav {
   display: none;
 }
@@ -96,7 +87,7 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: black;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3 ease-in-out;
 }
 
 .menu-links {
@@ -107,16 +98,17 @@ a:hover {
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  border-radius: 0.5rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3 ease-in-out;
 }
 
 .menu-links a {
   display: block;
-  padding: 10px 20px;
-  font-size: 1.2rem;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
   color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
 }
 
 .menu-links li {
@@ -139,40 +131,36 @@ a:hover {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
-/* ------------------------------- */
-/* SECTION LAYOUT */
-/* ------------------------------- */
+/* SECTIONS */
 section {
   padding-top: 4vh;
-  min-height: fit-content;
+  height: fit-content;
   margin: 0 10rem;
   box-sizing: border-box;
+  min-height: fit-content;
 }
 
 .section-container {
   display: flex;
-  gap: 4rem;
 }
 
-/* ------------------------------- */
 /* PROFILE SECTION */
-/* ------------------------------- */
 #profile {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 5rem;
   height: 80vh;
 }
 
 .section__pic-container {
+  display: flex;
   height: 400px;
   width: 400px;
-  display: flex;
   margin: auto 0;
 }
 
 .section__text {
+  align-self: center;
   text-align: center;
 }
 
@@ -192,32 +180,22 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
-  font-weight: 600;
 }
 
 #socials-container {
   display: flex;
   justify-content: center;
-  gap: 1rem;
   margin-top: 1rem;
+  gap: 1rem;
 }
 
-/* ------------------------------- */
 /* ICONS */
-/* ------------------------------- */
 .icon {
   cursor: pointer;
   height: 2rem;
-  transition: transform 0.2s ease;
 }
 
-.icon:hover {
-  transform: scale(1.1);
-}
-
-/* ------------------------------- */
 /* BUTTONS */
-/* ------------------------------- */
 .btn-container {
   display: flex;
   justify-content: center;
@@ -226,12 +204,20 @@ section {
 
 .btn {
   font-weight: 600;
+  transition: all 300ms ease;
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
-  background: none;
-  transition: all 300ms ease;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
 }
 
 .btn-color-1,
@@ -245,30 +231,32 @@ section {
 }
 
 .btn-color-2 {
-  background: transparent;
+  background: none;
 }
 
 .btn-color-2:hover {
-  border-color: rgb(255, 255, 255);
+  border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-/* ------------------------------- */
 /* ABOUT SECTION */
-/* ------------------------------- */
 #about {
   position: relative;
 }
 
 .about-containers {
-  display: flex;
   gap: 2rem;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .about-details-container {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
 }
 
 .about-pic {
@@ -277,115 +265,24 @@ section {
 
 .details-container {
   padding: 1.5rem;
+  flex: 1;
   background: white;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   border: rgb(163, 163, 163) 0.1rem solid;
   text-align: center;
-  flex: 1;
 }
 
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
+.section-container {
+  gap: 4rem;
+  height: 80%;
 }
 
-/* ------------------------------- */
 /* EXPERIENCE SECTION */
-/* ------------------------------- */
 #experience {
   position: relative;
 }
 
-.experience-details-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.details-container h2 {
-  color: rgb(30, 30, 30);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.details-container p {
-  font-size: 1rem;
-  color: rgb(85, 85, 85);
-}
-
-.details-container ul {
-  text-align: left;
-  padding-left: 1.5rem;
-}
-
-.details-container li {
-  margin-bottom: 0.5rem;
-  color: rgb(60, 60, 60);
-}
-
-.experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-}
-
-/* ------------------------------- */
-/* SKILLS SECTION */
-/* ------------------------------- */
-#skills {
-  position: relative;
-}
-
-#skills .details-container {
-  background: #fafafa;
-  border-radius: 1.5rem;
-  border: 1px solid rgb(200, 200, 200);
-  text-align: center;
-  padding: 2rem;
-}
-
-#skills .details-container h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
-  color: #222;
-}
-
-#skills .details-container p {
-  color: rgb(90, 90, 90);
-  font-size: 1rem;
-}
-
-/* ------------------------------- */
-/* CERTIFICATION SECTION */
-/* ------------------------------- */
-#certification {
-  position: relative;
-}
-
-#certification .details-container {
-  background: #fcfcfc;
-  border: 1px solid rgb(210, 210, 210);
-  border-radius: 1.5rem;
-  padding: 2rem;
-  text-align: center;
-}
-
-#certification .details-container h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
-}
-
-#certification .details-container p {
-  font-size: 1rem;
-  color: rgb(85, 85, 85);
-}
-
-/* ------------------------------- */
 /* PROJECTS SECTION */
-/* ------------------------------- */
 #projects {
   position: relative;
 }
@@ -393,27 +290,17 @@ section {
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
-  padding: 1rem;
-  border-radius: 1.5rem;
-  text-align: center;
 }
 
 .project-img {
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   width: 90%;
-  height: auto;
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.project-img:hover {
-  transform: scale(1.03);
+  height: 90%;
 }
 
 .project-title {
-  margin: 1rem 0;
+  margin: 1rem;
   color: black;
-  font-weight: 600;
 }
 
 .project-btn {
@@ -421,93 +308,48 @@ section {
   border-color: rgb(163, 163, 163);
 }
 
-/* ------------------------------- */
-/* CONTACT SECTION */
-/* ------------------------------- */
+/* CONTACT */
 #contact {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
-  text-align: center;
+  height: fit-content;
 }
 
-.contact-info-upper-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  border: 1px solid rgb(163, 163, 163);
-  border-radius: 1.5rem;
-  background-color: #fafafa;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-}
-
-.contact-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  margin: 1rem;
-}
-
-.contact-info-container p {
-  font-size: 1.1rem;
-}
-
-.contact-icon {
-  cursor: default;
-}
-
-.email-icon {
-  height: 2.5rem;
-}
-
-/* ------------------------------- */
-/* FOOTER */
-/* ------------------------------- */
+/* FOOTER SECTION */
 footer {
   height: 26vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin: 0 1rem;
-}
-
-footer nav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
 }
 
 footer p {
   text-align: center;
-  color: rgb(100, 100, 100);
-  font-size: 0.95rem;
 }
 
-.tenor-gif-embed {
-  border-radius: 1.5rem;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-/* CUSTOM BACKGROUND FOR CONTACT SECTION */
+/* ------------------------------------------------------------------- */
+/* 🔹 GLASSMORPHISM EFFECT FOR EXPERIENCE, SKILLS, CERTIFICATION, CONTACT */
+/* ------------------------------------------------------------------- */
+
+#experience,
+#skills,
+#certification,
 #contact {
   background-image: url("./assets/contactbg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: white;
   position: relative;
   z-index: 1;
+  border-radius: 2rem;
   padding-top: 6rem;
   padding-bottom: 6rem;
-  border-radius: 2rem;
 }
 
 /* Overlay for readability */
+#experience::before,
+#skills::before,
+#certification::before,
 #contact::before {
   content: "";
   position: absolute;
@@ -520,29 +362,9 @@ footer p {
   border-radius: 2rem;
 }
 
-/* Text & link color adjustments */
-#contact p,
-#contact a {
-  color: #f5f5f5;
-}
-
-#contact a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* Adjust container style */
-.contact-info-upper-container {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 1.5rem;
-  padding: 1rem 2rem;
-  backdrop-filter: blur(6px);
-}
-
-/* GLASSMORPHISM EFFECT FOR EXPERIENCE + SKILLS SECTIONS */
+/* Frosted glass containers inside */
 .details-container {
-  background: rgba(0, 0, 0, 0.35); /* semi-transparent dark glass */
+  background: rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 1.5rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
@@ -558,7 +380,6 @@ footer p {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
-/* Make inner text readable */
 .details-container h2,
 .details-container h3,
 .details-container p,
@@ -573,9 +394,27 @@ footer p {
   padding-left: 1.5rem;
 }
 
-/* Specific tweak for Skills section to center text */
 #skills .details-container p {
   text-align: center;
   font-weight: 500;
   font-size: 1.05rem;
+}
+
+/* CONTACT-SPECIFIC BOX */
+.contact-info-upper-container {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.5rem;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(6px);
+}
+
+#contact p,
+#contact a {
+  color: #f5f5f5;
+}
+
+#contact a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
