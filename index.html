@@ -2,394 +2,201 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaustubh's Portfolio</title>
+    <title>Kaustubh Mathur | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="icon" href="./assets/favicon.jpg" type="image/x-icon">
   </head>
+
   <body>
     <nav id="desktop-nav">
       <div class="logo">Kaustubh Mathur</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Skills</a></li>
-          <li><a href="#certification">Certification</a></li> 
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certification">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Kaustubh Mathur</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
+
+    <!-- Profile Section -->
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.jpg" alt="Kaustubh Mathur profile picture" />
+        <img src="./assets/profile-pic.jpg" alt="Kaustubh Mathur profile" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Kaustubh Mathur</h1>
-        <p class="section__text__p2"> Sophmore at University of Cincinnati</p>
+        <p class="section__text__p2">Junior | Computer Science @ University of Cincinnati</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/KaustubhMathur_ResumeFall2025.pdf')"
-          >
-            Download CV
+          <button class="btn btn-color-2" onclick="window.open('./assets/KaustubhMathur_ResumeFall2025.pdf')">
+            Download Resume
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/kaustubh-mathur/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Kaustubh-Mathur'"
-          />
+          <img src="./assets/linkedin.png" class="icon"
+            alt="LinkedIn" onclick="location.href='https://www.linkedin.com/in/kausmathur/'"/>
+          <img src="./assets/github.png" class="icon"
+            alt="GitHub" onclick="location.href='https://github.com/Kaustubh-Mathur'"/>
         </div>
       </div>
     </section>
+
+    <!-- About Section -->
     <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-          <div class="section__pic-container">
-            <img
-              src="./assets/about-pic.jpg"
-              alt="Profile picture"
-              class="about-pic"
-            />
-          </div>
-          <div class="about-details-container">
-            <div class="about-containers">
-              <div class="details-container">
-                <img
-                  src="./assets/experience.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <h3>Experience</h3>
-                <p>Currently <br />Research Assistant</p>
-              </div>
-              <div class="details-container">
-                <img
-                  src="./assets/education.png"
-                  alt="Education icon"
-                  class="icon"
-                />
-                <h3>Education</h3>
-                <p>B.Sc. Computer Science<br />Minor - Business Administration</p>
-              </div>
-            </div>
-            <div class="text-container">
-              <p>
-                I'm Kaustubh Mathur, a second-year student at the University of Cincinnati. I am pursuing a Computer Science bachelor's degree with a Business Administration minor. Besides that, I am a Research Assistant for Dr. David Reeping. My responsibilities include managing Excel files and analyzing them using Python. I also serve as a Teaching Assistant for a first-year engineering course. Apart from academics, I enjoy watching Formula One, playing football with my buddies, and going to the gym in my spare time.            </p>
-            </div>
-          </div>
+      <p class="section__text__p1">Get to Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/about-pic.jpg" class="about-pic" alt="About picture" />
         </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#experience'"
-        />
-    </section>
-    <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Skills</h1>
-        <div class="experience-details-container">
+        <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <h2 class="experience-sub-title">Research Assistant</h2>
-              <div class="article-container">
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Python</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Git</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>SQL</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>JavaScript</h3>
-                    <p>Basic</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>C++</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>MATLAB</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-              </div>
+              <img src="./assets/experience.png" class="icon" alt="Experience icon" />
+              <h3>Experience</h3>
+              <p>2+ Years<br/>Co-op | Research | Teaching</p>
             </div>
             <div class="details-container">
-              <h2 class="experience-sub-title">Teaching Assistant</h2>
-              <div class="article-container">
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>VBA</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>CSS</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>LabVIEW</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Matplotlib</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>    
-              </div>
+              <img src="./assets/education.png" class="icon" alt="Education icon" />
+              <h3>Education</h3>
+              <p>B.S. Computer Science<br/>Minor – Business Administration</p>
             </div>
           </div>
+          <div class="text-container">
+            <p>
+              I’m a Computer Science student passionate about solving complex operational challenges using data.
+              At Delta Air Lines, I automated business analytics processes that reduced processing times by over 90% and
+              enabled multimillion-dollar savings. As a Research and Teaching Assistant at the University of Cincinnati,
+              I built Python-based data validation tools and mentored 70+ students in engineering design. 
+              Outside academics, I’m driven by Formula 1, weight training, and exploring emerging tech.
+            </p>
+          </div>
         </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#projects'"
-        />    </section>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <p class="section__text__p1">My Professional Journey</p>
+      <h1 class="title">Experience</h1>
+
+      <div class="experience-details-container">
+        <div class="details-container">
+          <h2>Delta Air Lines — Operational Business Analyst Co-op</h2>
+          <p><i>Aug 2024 – Present | Atlanta, GA</i></p>
+          <ul>
+            <li>Automated bid shell creation using Python, cutting processing time from 8 min to 10 sec.</li>
+            <li>Built Power BI dashboards and SAS pipelines saving $2.3 M per month through smarter staffing targets.</li>
+            <li>Integrated AWS + Python + Power BI to cut manual work 70% across teams.</li>
+          </ul>
+        </div>
+
+        <div class="details-container">
+          <h2>University of Cincinnati — Research Assistant</h2>
+          <p><i>Jan 2024 – Aug 2024 | Cincinnati, OH</i></p>
+          <ul>
+            <li>Standardized national engineering Plans of Study across 9 institutions.</li>
+            <li>Built Python validation tools improving data integrity 60%.</li>
+          </ul>
+        </div>
+
+        <div class="details-container">
+          <h2>University of Cincinnati — Teaching Assistant</h2>
+          <p><i>Aug 2023 – Aug 2024 | Cincinnati, OH</i></p>
+          <ul>
+            <li>Supported 72 students in design projects and mentored 10 new TAs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2>Programming & Databases</h2>
+            <p>Python · SQL · HTML · JSON · VBA · MATLAB · Teradata</p>
+          </div>
+          <div class="details-container">
+            <h2>Visualization & Automation</h2>
+            <p>Power BI · Tableau · Excel · Power Apps · Power Automate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certification Section -->
     <section id="certification">
       <p class="section__text__p1">Achieved Certifications</p>
       <h1 class="title">Certifications</h1>
       <div class="certification-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">IBM Full Stack Software Developer</h2>
-            <div class="article-container">
-                <div class="text-container">
-                    <p>
-                        Completing this certificate course has equipped me with a diverse skill set crucial for modern full stack developers. From mastering tools like Containers, Kubernetes, and Serverless for application deployment to refining front-end development with HTML, CSS, JavaScript, React, and Bootstrap, I'm now adept at building robust software solutions. With expertise in Git, cloud computing, DevOps, and distributed version control, alongside a rich portfolio from hands-on labs, I'm prepared to excel in real-world software development scenarios.
-                    </p>
-                  </div>
-            </div>
+            <h2>IBM Full Stack Software Developer</h2>
+            <p>Mastered full-stack development tools including HTML, CSS, JS, React, Kubernetes, and DevOps pipelines.</p>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Google IT Automation with Python</h2>
-            <div class="article-container">
-                <div class="text-container">
-                    <p>
-                        Completing the certificate course has equipped me with invaluable skills in automation, Python scripting, and version control using Git and GitHub. I've gained proficiency in managing IT resources efficiently, whether it's for physical machines or virtual machines in the cloud. Moreover, I've developed a knack for analyzing real-world IT challenges and implementing effective strategies to tackle them. Through troubleshooting and debugging, I've honed my problem-solving abilities, making me well-prepared to navigate complex IT environments with confidence and expertise.                    </p>
-                </div>
+            <h2>Google IT Automation with Python</h2>
+            <p>Gained hands-on expertise in scripting, Git, cloud resource management, and troubleshooting automation.</p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
+
+    <!-- Projects Section -->
     <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-1.png"
-                  alt="Project 1"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Weather Website</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/Kaustubh-Mathur/Weather-Website'"
-                >
-                  Github
-                </button>
-  
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-2.png"
-                  alt="Project 2"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Face Detection Software</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/Kaustubh-Mathur/Face-Detection'"
-                >
-                  Github
-                </button>
-  
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-3.jpg"
-                  alt="Project 3"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Smart Warehouse Robot</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-  
-              </div>
-            </div>
-          </div>
+      <p class="section__text__p1">Recent Work</p>
+      <h1 class="title">Projects</h1>
+
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <img src="./assets/project-4.png" class="project-img" alt="Risk Tool" />
+          <h2>Risk Escalation Assessment Tool</h2>
+          <p>Identified $19.1 M in Q3 cost savings using Excel automation & scenario modeling for Delta Air Lines.</p>
         </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
-      </section>
-      <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-          <div class="contact-info-container">
-            <img
-              src="./assets/email.png"
-              alt="Email icon"
-              class="icon contact-icon email-icon"
-            />
-            <p><a href="mailto:mathurkh@mail.uc.edu">mathurkh@mail.uc.edu</a></p>
-          </div>
-          <div class="contact-info-container">
-            <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn icon"
-              class="icon contact-icon"
-            />
-            <p><a href="https://www.linkedin.com/in/kaustubh-mathur/">LinkedIn</a></p>
-          </div>
+
+        <div class="details-container color-container">
+          <img src="./assets/project-5.png" class="project-img" alt="Neural Analytics" />
+          <h2>Neural Interface Analytics</h2>
+          <p>Developed Python models predicting device performance metrics with SQLite for medical applications.</p>
         </div>
-      </section>
-      <footer>
-        <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#certification">Certification</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-        <p>Copyright &#169; 2024 Kaustubh Mathur. All Rights Reserved.</p>
-      </footer>
-      <script src="script.js"></script>
-    </body>
-  </html>
+
+        <div class="details-container color-container">
+          <img src="./assets/project-1.png" class="project-img" alt="Weather Website" />
+          <h2>Weather Website</h2>
+          <button class="btn btn-color-2" onclick="location.href='https://github.com/Kaustubh-Mathur/Weather-Website'">GitHub</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" class="icon contact-icon" alt="Email" />
+          <p><a href="mailto:mathurkh@mail.uc.edu">mathurkh@mail.uc.edu</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" class="icon contact-icon" alt="LinkedIn" />
+          <p><a href="https://www.linkedin.com/in/kausmathur/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Kaustubh Mathur. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
