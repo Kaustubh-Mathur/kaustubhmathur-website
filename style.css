@@ -418,3 +418,47 @@ footer p {
   color: #ffffff;
   text-decoration: underline;
 }
+
+/* CONTACT SECTION BACKGROUND */
+#contact {
+  background-image: url("./assets/contactbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 6rem 0;
+  border-radius: 2rem;
+  transition: background-position 0.3s ease-out;
+}
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 2rem;
+  z-index: -1;
+}
+
+/* Fade-in effect */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* GIF polish */
+.gif-container iframe {
+  border-radius: 1.5rem;
+  transition: transform 0.4s ease, opacity 0.4s ease, filter 0.3s ease;
+}
+.gif-container:hover iframe {
+  transform: scale(1.04);
+  opacity: 0.95;
+}
