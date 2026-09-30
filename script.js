@@ -151,5 +151,60 @@
   const brands = (navigator.userAgentData && navigator.userAgentData.brands) || [];
   if (brands.some(b => /Chromium/i.test(b.brand))) document.documentElement.classList.add('lg-refract');
 
+  /* ---------- Project browser: search, categories, view, watchlist ---------- */
+  const grid = $('#grid');
+  if (grid) {
+    const cards = $$('.listing', grid);
+    const q = $('#q');
+    const results = $('#results');
+    const empty = $('#empty');
+    const watchEl = $('#watchCount');
+    const catBtns = $$('#cats button');
+    const viewBtns = $$('.shop__view button');
+    let cat = 'all';
+
+    cards.forEach(c => { c.dataset.text = (c.textContent + ' ' + c.dataset.cats).toLowerCase().replace(/\s+/g, ' '); });
+
+    const apply = () => {
+      const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+      let n = 0;
+      cards.forEach(c => {
+        const okQ = terms.every(t => c.dataset.text.includes(t));
+        const okC = cat === 'all' || c.dataset.cats.split(' ').includes(cat);
+        c.hidden = !(okQ && okC);
+        if (!c.hidden) n++;
+      });
+      const label = catBtns.find(b => b.dataset.cat === cat).textContent;
+      let text = n + (n === 1 ? ' result' : ' results');
+      if (q.value.trim()) text += ' for \u201c' + q.value.trim() + '\u201d';
+      if (cat !== 'all') text += ' in ' + label;
+      results.textContent = text;
+      empty.hidden = n !== 0;
+    };
+
+    q.addEventListener('input', apply);
+    catBtns.forEach(b => b.addEventListener('click', () => {
+      cat = b.dataset.cat;
+      catBtns.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      apply();
+    }));
+    viewBtns.forEach(b => b.addEventListener('click', () => {
+      viewBtns.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      grid.classList.toggle('is-list', b.dataset.view === 'list');
+    }));
+    $('#clear').addEventListener('click', () => {
+      q.value = ''; cat = 'all';
+      catBtns.forEach(x => x.setAttribute('aria-pressed', String(x.dataset.cat === 'all')));
+      apply(); q.focus();
+    });
+
+    grid.addEventListener('click', e => {
+      const h = e.target.closest('.heart');
+      if (!h) return;
+      h.setAttribute('aria-pressed', String(h.getAttribute('aria-pressed') !== 'true'));
+      watchEl.textContent = 'Watching ' + $$('.heart[aria-pressed="true"]', grid).length;
+    });
+  }
+
   $('#year').textContent = new Date().getFullYear();
 })();
