@@ -1,457 +1,399 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Kaustubh Mathur</title>
-  <meta name="description" content="Kaustubh Mathur — Computer Science and Business student at the University of Cincinnati. Analytics and automation at Delta Air Lines." />
-  <meta name="theme-color" content="#000000" />
-  <link rel="icon" href="./assets/favicon.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#131921">
+<meta name="description" content="Explore Kaustubh Mathur’s projects in analytics, automation, data engineering and AI.">
+<title>Kaustubh Mathur | Explore my work</title>
+<link rel="icon" href="assets/favicon.jpg">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer>
+</script>
 </head>
-<body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <filter id="lg-refract" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.014" numOctaves="2" seed="7" result="noise" />
-      <feGaussianBlur in="noise" stdDeviation="3" result="soft" />
-      <feDisplacementMap in="SourceGraphic" in2="soft" scale="16" xChannelSelector="R" yChannelSelector="G" />
-    </filter>
-  </svg>
-
-  <div class="util">
-    <div class="util__inner">
-      <p>Open to analyst roles starting May 2027</p>
-      <nav aria-label="Quick links">
-        <a href="./assets/KaustubhMathur_ResumeFall2025.pdf" target="_blank" rel="noopener">Resume</a>
-        <a href="https://www.linkedin.com/in/kausmathur/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/Kaustubh-Mathur" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:mathurkh@mail.uc.edu">Email</a>
-      </nav>
-    </div>
-  </div>
-
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#top" class="nav__name">Kaustubh Mathur</a>
-      <nav class="nav__links" id="navLinks" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main id="top">
-
-    <!-- HERO -->
-    <section class="hero" id="hero">
-      <div class="ambient" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
-      <div class="hero__text">
-        <p class="hero__hello">Kaustubh Mathur</p>
-        <h1 class="hero__title">
-          <span class="line"><span>Messy operations data.</span></span>
-          <span class="line"><span>Clear decisions.</span></span>
-        </h1>
-        <p class="hero__sub">Computer Science and Business at the University of Cincinnati. I build the data pipelines, dashboards and AI-assisted tools that make analytics teams faster.</p>
-        <div class="hero__cta">
-          <a class="pill pill--tint glass" href="./assets/KaustubhMathur_ResumeFall2025.pdf" target="_blank" rel="noopener">Resume</a>
-          <a class="pill glass" href="#contact">Get in touch</a>
-        </div>
-      </div>
-      <div class="hero__photo glass" id="heroPhoto">
-        <img src="./assets/profile-pic.jpeg" alt="Kaustubh Mathur in a grey suit" />
-      </div>
-    </section>
-
-    <!-- STATEMENT -->
-    <section class="story" id="story">
-      <div class="story__sticky">
-        <p class="story__text lit" id="lit">At Delta Air Lines I built the pipelines nobody should have to run by hand. A bid shell that took nine minutes now takes seconds. Attrition trends assemble themselves every week. Baggage performance is tracked station by station, and the savings run into the millions.</p>
-      </div>
-    </section>
-
-    <!-- NUMBERS -->
-    <section class="numbers" aria-label="Impact">
-      <div class="ambient" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
-      <dl class="numbers__grid">
-        <div class="glass">
-          <dt><span class="count" data-to="98" data-suffix="%">98%</span></dt>
-          <dd>less time to generate bid shells: 8&ndash;9 minutes down to 5&ndash;10 seconds</dd>
-        </div>
-        <div class="glass">
-          <dt><span class="count" data-to="2.3" data-prefix="$" data-suffix="M" data-dec="1">$2.3M</span></dt>
-          <dd>a month in staffing cost savings, informed by an automated SAS pipeline</dd>
-        </div>
-        <div class="glass">
-          <dt><span class="count" data-to="19.1" data-prefix="$" data-suffix="M" data-dec="1">$19.1M</span></dt>
-          <dd>in Q3 cost savings identified by a scenario planning tool</dd>
-        </div>
-        <div class="glass">
-          <dt><span class="count" data-to="30" data-suffix="%">30%</span></dt>
-          <dd>better baggage transfer efficiency, measured after Baggage AI went live</dd>
-        </div>
-      </dl>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="light about" id="about">
-      <div class="ambient ambient--light" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
-      <div class="wrap about__grid">
-        <div class="about__photo">
-          <img src="./assets/about-pic.jpeg" alt="Kaustubh Mathur smiling at a restaurant table" loading="lazy" />
-          <span class="chip glass">Graduating May 2027</span>
-        </div>
-        <div class="about__body">
-          <h2 class="h2">Numbers are the start. Operations are the point.</h2>
-          <p class="lead">I'm a senior studying Computer Science with a minor in Business Administration, graduating in May 2027. I like problems where a spreadsheet, a query and a good question can change how a whole team works.</p>
-          <p class="lead">I've spent more than two years across co-op, research and teaching, and the through-line is the same: find the slow, manual step and replace it with something reliable.</p>
-          <dl class="facts glass glass--light">
-            <div><dt>Studying</dt><dd>B.S. Computer Science, minor in Business Administration</dd></div>
-            <div><dt>Recognition</dt><dd>Dean's List six terms, CEAS International Outreach Scholar, National Co-op Ambassador</dd></div>
-            <div><dt>Working on</dt><dd>Data pipelines, lakehouse storage and AI-assisted change tracking</dd></div>
-            <div><dt>Off the clock</dt><dd>Formula 1, the gym, and whatever new tech I'm poking at</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="light light--alt experience" id="experience">
-      <div class="ambient ambient--light" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
-      <div class="wrap">
-        <h2 class="h2 h2--center">Where I've worked.</h2>
-
-        <ol class="timeline">
-          <li class="job glass glass--light">
-            <div class="job__meta">
-              <h3>Business Analyst Co-op</h3>
-              <p class="job__org">Delta Air Lines &middot; ACS Field Support</p>
-              <p class="job__when">Aug 2024 &ndash; Aug 2026<br />Atlanta, GA &middot; three co-op rotations</p>
-            </div>
-            <ul class="job__list">
-              <li>Built end-to-end pipelines that connect AWS databases to Python and Power BI, cutting manual data processing by about 70% and enabling near-real-time operational reporting.</li>
-              <li>Set up AWS S3 Tables and Apache Iceberg for lakehouse-style storage and backup, speeding up data retrieval for production analytics.</li>
-              <li>Developed an automated SAS pipeline that cleans HR and scheduling data and joins headcount to station-level records to derive weekly attrition trends. It feeds a Power BI semantic model that informed $2.3M a month in staffing cost savings.</li>
-              <li>Automated bid shell generation with a Python pipeline over scheduling data, cutting processing time by 98% (8&ndash;9 minutes to 5&ndash;10 seconds).</li>
-              <li>Built a Python pipeline that produces formatted Excel and PDF staffing reports for dozens of airport stations, with automated chart extraction and data-driven narrative, replacing a manual process for the whole team.</li>
-              <li>Analyzed Baggage AI post-deployment data, measuring a 30% improvement in baggage transfer efficiency, and built Python and Power BI pipelines that monitor station KPIs and surface regressions for ops teams.</li>
-            </ul>
-          </li>
-
-          <li class="job glass glass--light">
-            <div class="job__meta">
-              <h3>Research Assistant</h3>
-              <p class="job__org">University of Cincinnati</p>
-              <p class="job__when">Jan 2024 &ndash; Aug 2024<br />Cincinnati, OH</p>
-            </div>
-            <ul class="job__list">
-              <li>Built Python data quality tools that enforce field types, range checks and cross-table consistency rules across 1,000+ records, cutting manual entry errors by 60% and speeding integration for a 9-person research team.</li>
-              <li>Helped standardize engineering Plans of Study across the U.S.</li>
-              <li>Co-authored research papers and documented the work so others could reproduce it.</li>
-            </ul>
-          </li>
-
-          <li class="job glass glass--light">
-            <div class="job__meta">
-              <h3>Teaching Assistant</h3>
-              <p class="job__org">University of Cincinnati</p>
-              <p class="job__when">Aug 2023 &ndash; Aug 2024<br />Cincinnati, OH</p>
-            </div>
-            <ul class="job__list">
-              <li>Supported the Foundations of Engineering Design Thinking course and tutored 72 students.</li>
-              <li>Handled project questions between students and professors.</li>
-              <li>Trained 10 new TAs on course standards and lab safety.</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="dark skills" id="skills">
-      <div class="ambient" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
-      <div class="wrap">
-        <h2 class="h2 h2--center">What I build with.</h2>
-        <div class="stack glass">
-          <div class="stack__row"><h3>Programming and databases</h3><p>Python, SQL, SAS, Teradata, VBA, MATLAB</p></div>
-          <div class="stack__row"><h3>Data engineering and cloud</h3><p>ETL and ELT pipelines, data modeling, AWS, Apache Iceberg, Microsoft Fabric</p></div>
-          <div class="stack__row"><h3>BI and reporting</h3><p>Power BI with semantic models and DAX, Tableau, Excel, Streamlit</p></div>
-          <div class="stack__row"><h3>Automation and collaboration</h3><p>Power Automate, Power Apps, SharePoint</p></div>
-        </div>
-
-        <div class="certs">
-          <h3 class="certs__title">Certifications</h3>
-          <div class="certs__grid">
-            <div class="glass">
-              <h4>IBM Full Stack Software Developer</h4>
-              <p>HTML, CSS, JavaScript, React, Kubernetes and DevOps pipelines.</p>
-            </div>
-            <div class="glass">
-              <h4>Google IT Automation with Python</h4>
-              <p>Scripting, Git, cloud resource management and troubleshooting automation.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="light projects" id="projects">
-      <div class="ambient ambient--light" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
-      <div class="wrap">
-        <h2 class="h2 h2--center">Browse my work.</h2>
-
-        <div class="shop glass glass--light" role="search">
-          <label class="shop__search">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-            <input id="q" type="search" placeholder="Search my work: Python, dashboards, AI..." autocomplete="off" aria-label="Search projects" />
-          </label>
-          <div class="shop__view" role="group" aria-label="View">
-            <button type="button" data-view="grid" aria-pressed="true">Grid</button>
-            <button type="button" data-view="list" aria-pressed="false">List</button>
-          </div>
-          <span class="shop__watch" id="watchCount">Watching 0</span>
-        </div>
-
-        <div class="cats" id="cats" role="group" aria-label="Categories">
-          <button type="button" data-cat="all" aria-pressed="true">All</button>
-          <button type="button" data-cat="data" aria-pressed="false">Data engineering</button>
-          <button type="button" data-cat="auto" aria-pressed="false">Automation</button>
-          <button type="button" data-cat="bi" aria-pressed="false">Dashboards</button>
-          <button type="button" data-cat="ai" aria-pressed="false">AI</button>
-          <button type="button" data-cat="research" aria-pressed="false">Research</button>
-          <button type="button" data-cat="school" aria-pressed="false">School</button>
-        </div>
-
-        <p class="results" id="results" aria-live="polite">10 results</p>
-
-        <div class="grid" id="grid">
-          <article class="listing glass glass--light listing--featured" data-cats="ai data">
-            <div class="thumb thumb--scan">
-              <span class="badge glass">Featured</span>
-              <button class="heart glass" type="button" aria-pressed="false" aria-label="Watch DE SCAN: AI-assisted change impact assessment"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2 0 3.700 1.100 5.700 3.300C14 6.100 15.700 5 17.700 5 21 5 23.100 8.400 21.600 11.800 19.500 16.400 12 21 12 21z"/></svg></button>
-              <svg class="art" viewBox="0 0 200 125" aria-hidden="true"><circle cx="100" cy="62" r="18"/><circle cx="100" cy="62" r="36"/><circle cx="100" cy="62" r="54" stroke-opacity=".45"/><path class="acc" d="M100 62 L146 30"/><circle class="dot" cx="132" cy="44" r="4"/><circle class="dot" cx="78" cy="88" r="4"/><circle class="dot" cx="118" cy="98" r="3"/></svg>
-            </div>
-            <div class="listing__body">
-              <h3>DE SCAN: AI-assisted change impact assessment</h3>
-              <p class="listing__sub">Python, LLM agents &middot; July 2026</p>
-              <p class="listing__price"><strong>30 of 30</strong><span>real pipeline-breaking changes flagged in validation</span></p>
-              <p class="listing__desc">Agent-based workflows catch upstream data-source changes before they cause downstream incidents, mapping each one to the assets it affects across four metadata sources. Runs unattended every 6 hours across about 25 change requests a day, with confidence scoring, risk classes and human review checkpoints.</p>
-              <ul class="tags"><li>Python</li><li>LLM agents</li><li>Metadata</li></ul>
-              <a class="buy" href="mailto:mathurkh@mail.uc.edu?subject=Re%3A%20DE%20SCAN">Ask about this</a>
-            </div>
-          </article>
-          <article class="listing glass glass--light" data-cats="bi auto">
-            <div class="thumb thumb--risk">
-              <span class="badge glass">Top impact</span>
-              <button class="heart glass" type="button" aria-pressed="false" aria-label="Watch Risk Escalation Assessment Tool"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2 0 3.700 1.100 5.700 3.300C14 6.100 15.700 5 17.700 5 21 5 23.100 8.400 21.600 11.800 19.500 16.400 12 21 12 21z"/></svg></button>
-              <svg class="art" viewBox="0 0 200 125" aria-hidden="true"><path d="M28 105 H172"/><rect x="42" y="74" width="18" height="31" rx="3"/><rect x="72" y="58" width="18" height="47" rx="3"/><rect x="102" y="42" width="18" height="63" rx="3"/><rect class="solid" x="132" y="20" width="18" height="85" rx="3"/></svg>
-            </div>
-            <div class="listing__body">
-              <h3>Risk Escalation Assessment Tool</h3>
-              <p class="listing__sub">Delta Air Lines &middot; Excel &middot; Aug 2025</p>
-              <p class="listing__price"><strong>$19.1M</strong><span>in Q3 cost savings identified</span></p>
-              <p class="listing__desc">Built with operations and finance stakeholders: an Excel scenario planning and risk tool with an interactive dashboard for workforce utilization, financial coverage and resource trade-offs.</p>
-              <ul class="tags"><li>Excel</li><li>Scenario modeling</li><li>Dashboards</li></ul>
-              <a class="buy" href="mailto:mathurkh@mail.uc.edu?subject=Re%3A%20Risk%20Escalation%20Assessment%20Tool">Ask about this</a>
-            </div>
-          </article>
-          <article class="listing glass glass--light" data-cats="data bi">
-            <div class="thumb thumb--attr">
-              
-              <button class="heart glass" type="button" aria-pressed="false" aria-label="Watch Weekly attrition pipeline and semantic model"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2 0 3.700 1.100 5.700 3.300C14 6.100 15.700 5 17.700 5 21 5 23.100 8.400 21.600 11.800 19.500 16.400 12 21 12 21z"/></svg></button>
-              <svg class="art" viewBox="0 0 200 125" aria-hidden="true"><path d="M24 100 H176" stroke-opacity=".45"/><path d="M24 36 L60 50 L96 44 L132 72 L176 86"/><circle class="dot" cx="60" cy="50" r="4"/><circle class="dot" cx="132" cy="72" r="4"/><circle class="dot" cx="176" cy="86" r="4"/></svg>
-            </div>
-            <div class="listing__body">
-              <h3>Weekly attrition pipeline and semantic model</h3>
-              <p class="listing__sub">Delta Air Lines &middot; SAS, Power BI</p>
-              <p class="listing__price"><strong>$2.3M / mo</strong><span>in staffing cost savings informed</span></p>
-              <p class="listing__desc">An automated SAS pipeline cleans and aggregates HR and scheduling data, joins headcount to station-level records and derives weekly attrition trends for a Power BI semantic model.</p>
-              <ul class="tags"><li>SAS</li><li>Power BI</li><li>Semantic model</li></ul>
-              <a class="buy" href="mailto:mathurkh@mail.uc.edu?subject=Re%3A%20Weekly%20attrition%20pipeline">Ask about this</a>
-            </div>
-          </article>
-          <article class="listing glass glass--light" data-cats="auto data">
-            <div class="thumb thumb--bid">
-              
-              <button class="heart glass" type="button" aria-pressed="false" aria-label="Watch Bid shell generation pipeline"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2 0 3.700 1.100 5.700 3.300C14 6.100 15.700 5 17.700 5 21 5 23.100 8.400 21.600 11.800 19.500 16.400 12 21 12 21z"/></svg></button>
-              <svg class="art" viewBox="0 0 200 125" aria-hidden="true"><text x="30" y="72">9 min</text><path d="M96 64 H118"/><path d="M110 56 L118 64 L110 72"/><text class="acct" x="128" y="72">10 s</text></svg>
-            </div>
-            <div class="listing__body">
-              <h3>Bid shell generation pipeline</h3>
-              <p class="listing__sub">Delta Air Lines &middot; Python</p>
-              <p class="listing__price"><strong>98% faster</strong><span>from 8&ndash;9 minutes to 5&ndash;10 seconds</span></p>
-              <p class="listing__desc">A scripted Python pipeline pulls from scheduling data sources and replaces manual data entry.</p>
-              <ul class="tags"><li>Python</li><li>Automation</li></ul>
-              <a class="buy" href="mailto:mathurkh@mail.uc.edu?subject=Re%3A%20Bid%20shell%20generation%20pipeline">Ask about this</a>
-            </div>
-          </article>
-          <article class="listing glass glass--light" data-cats="data">
-            <div class="thumb thumb--aws">
-              
-              <button class="heart glass" type="button" aria-pressed="false" aria-label="Watch AWS to Power BI pipelines and lakehouse storage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2 0 3.700 1.100 5.700 3.300C14 6.100 15.700 5 17.700 5 21 5 23.100 8.400 21.600 11.800 19.500 16.400 12 21 12 21z"/></svg></button>
-              <svg class="art" viewBox="0 0 200 125" aria-hidden="true"><path d="M100 22 L152 44 L100 66 L48 44 Z"/><path d="M48 60 L100 82 L152 60" stroke-opacity=".7"/><path d="M48 76 L100 98 L152 76" stroke-opacity=".4"/><circle class="dot" cx="100" cy="44" r="4"/></svg>
-            </div>
-            <div class="listing__body">
-              <h3>AWS to Power BI pipelines and lakehouse storage</h3>
-              <p class="listing__sub">Delta Air Lines &middot; AWS, Python, Power BI</p>
-              <p class="listing__price"><strong>~70%</strong><span>less manual data processing</span></p>
-              <p class="listing__desc">End-to-end pipelines connect AWS databases to Python and Power BI for near-real-time reporting, with AWS S3 Tables and Apache Iceberg for lakehouse-style storage and backup.</p>
-              <ul class="tags"><li>AWS</li><li>Apache Iceberg</li><li>Power BI</li></ul>
-              <a class="buy" href="mailto:mathurkh@mail.uc.edu?subject=Re%3A%20AWS%20to%20Power%20BI%20pipelines">Ask about this</a>
-            </div>
-          </article>
-          <article class="listing glass glass--light" data-cats="bi data">
-            <div class="thumb thumb--kpi">
-              
-              <button class="heart glass" type="button" aria-pressed="false" aria-label="Watch Baggage AI performance analysis"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2 0 3.700 1.100 5.700 3.300C14 6.100 15.700 5 17.700 5 21 5 23.100 8.400 21.600 11.800 19.500 16.400 12 21 12 21z"/></svg></button>
-              <svg class="art" viewBox="0 0 200 125" aria-hidden="true"><path d="M24 60 H176" stroke-dasharray="4 6" stroke-opacity=".5"/><path d="M24 96 L60 74 L96 82 L132 46 L176 30"/><circle class="dot" cx="132" cy="46" r="4"/><circle class="dot" cx="176" cy="30" r="4"/></svg>
-            </div>
-            <div class="listing__body">
-              <h3>Baggage AI performance analysis</h3>
-              <p class="listing__sub">Delta Air Lines &middot; Python, Power BI</p>
-              <p class="listing__price"><strong>30%</strong><span>better baggage transfer efficiency, measured</span></p>
-              <p class="listing__desc">Post-deployment analysis of operational data, plus pipelines that monitor station-level KPIs and surface regressions for ops teams.</p>
-              <ul class="tags"><li>Python</li><li>Power BI</li><li>KPIs</li></ul>
-              <a class="buy" href="mailto:mathurkh@mail.uc.edu?subject=Re%3A%20Baggage%20AI%20performance%20analysis">Ask about this</a>
-            </div>
-          </article>
-          <article class="listing glass glass--light" data-cats="auto">
-            <div class="thumb thumb--docs">
-              
-              <button class="heart glass" type="button" aria-pressed="false" aria-label="Watch Station staffing report generator"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2 0 3.700 1.100 5.700 3.300C14 6.100 15.700 5 17.700 5 21 5 23.100 8.400 21.600 11.800 19.500 16.400 12 21 12 21z"/></svg></button>
-              <svg class="art" viewBox="0 0 200 125" aria-hidden="true"><rect x="56" y="24" width="70" height="88" rx="8"/><rect x="74" y="14" width="70" height="88" rx="8" stroke-opacity=".45"/><path d="M68 50 H112 M68 64 H112 M68 78 H96"/><path class="acc" d="M70 100 V94 M79 100 V88 M88 100 V96"/></svg>
-            </div>
-            <div class="listing__body">
-              <h3>Station staffing report generator</h3>
-              <p class="listing__sub">Delta Air Lines &middot; Python</p>
-              <p class="listing__price"><strong>Dozens</strong><span>of airport stations covered</span></p>
-              <p class="listing__desc">Generates formatted Excel and PDF staffing reports with automated chart extraction and data-driven narrative, replacing a manual process for the whole team.</p>
-              <ul class="tags"><li>Python</li><li>Excel</li><li>PDF</li></ul>
-              <a class="buy" href="mailto:mathurkh@mail.uc.edu?subject=Re%3A%20Station%20staffing%20report%20generator">Ask about this</a>
-            </div>
-          </article>
-          <article class="listing glass glass--light" data-cats="research data">
-            <div class="thumb thumb--check">
-              
-              <button class="heart glass" type="button" aria-pressed="false" aria-label="Watch Research data validation tools"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2 0 3.700 1.100 5.700 3.300C14 6.100 15.700 5 17.700 5 21 5 23.100 8.400 21.600 11.800 19.500 16.400 12 21 12 21z"/></svg></button>
-              <svg class="art" viewBox="0 0 200 125" aria-hidden="true"><circle cx="52" cy="34" r="9"/><path d="M47 34 L51 38 L58 30"/><path d="M76 34 H152"/><circle cx="52" cy="62" r="9"/><path d="M47 62 L51 66 L58 58"/><path d="M76 62 H140"/><circle cx="52" cy="90" r="9" stroke="#2997ff"/><path class="acc" d="M47 90 L51 94 L58 86"/><path d="M76 90 H148"/></svg>
-            </div>
-            <div class="listing__body">
-              <h3>Research data validation tools</h3>
-              <p class="listing__sub">University of Cincinnati &middot; Python &middot; 2024</p>
-              <p class="listing__price"><strong>60%</strong><span>fewer manual entry errors</span></p>
-              <p class="listing__desc">Data quality checks for field types, value ranges and cross-table consistency across 1,000+ records, built for a nine-person research team.</p>
-              <ul class="tags"><li>Python</li><li>Data quality</li></ul>
-              <a class="buy" href="mailto:mathurkh@mail.uc.edu?subject=Re%3A%20Research%20data%20validation%20tools">Ask about this</a>
-            </div>
-          </article>
-          <article class="listing glass glass--light" data-cats="research school">
-            <div class="thumb thumb--neural">
-              
-              <button class="heart glass" type="button" aria-pressed="false" aria-label="Watch Neural Interface Analytics"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2 0 3.700 1.100 5.700 3.300C14 6.100 15.700 5 17.700 5 21 5 23.100 8.400 21.600 11.800 19.500 16.400 12 21 12 21z"/></svg></button>
-              <svg class="art" viewBox="0 0 200 125" aria-hidden="true"><path d="M16 62 C 40 20, 62 104, 86 62 S 132 20, 156 62 S 188 88, 194 62"/><path class="acc" d="M16 62 C 46 36, 70 88, 100 62 S 150 36, 184 62"/></svg>
-            </div>
-            <div class="listing__body">
-              <h3>Neural Interface Analytics</h3>
-              <p class="listing__sub">University of Cincinnati &middot; Python, SQLite &middot; Dec 2024</p>
-              <p class="listing__price"><strong>Predictive</strong><span>models of neural device performance</span></p>
-              <p class="listing__desc">Models built on neural interface signal data forecast device performance. The findings went into a technical report that guided ongoing analytics work.</p>
-              <ul class="tags"><li>Python</li><li>SQLite</li><li>Modeling</li></ul>
-              <a class="buy" href="mailto:mathurkh@mail.uc.edu?subject=Re%3A%20Neural%20Interface%20Analytics">Ask about this</a>
-            </div>
-          </article>
-          <article class="listing glass glass--light" data-cats="ai school">
-            <div class="thumb thumb--tag">
-              
-              <button class="heart glass" type="button" aria-pressed="false" aria-label="Watch BarCat Deals"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2 0 3.700 1.100 5.700 3.300C14 6.100 15.700 5 17.700 5 21 5 23.100 8.400 21.600 11.800 19.500 16.400 12 21 12 21z"/></svg></button>
-              <svg class="art" viewBox="0 0 200 125" aria-hidden="true"><path d="M52 26 H106 L148 64 L106 102 H52 Z" stroke-linejoin="round"/><circle cx="70" cy="64" r="7"/><path class="acc" d="M160 40 a26 26 0 0 1 0 48"/><path class="acc" d="M174 28 a42 42 0 0 1 0 72"/></svg>
-            </div>
-            <div class="listing__body">
-              <h3>BarCat Deals</h3>
-              <p class="listing__sub">Capstone &middot; Team of five &middot; In progress</p>
-              <p class="listing__price"><strong>In progress</strong><span>capstone with a team of five</span></p>
-              <p class="listing__desc">AI-powered scrapers watch social media and gather University of Cincinnati-area bar deals into one searchable feed.</p>
-              <ul class="tags"><li>AI scrapers</li><li>Team project</li></ul>
-              <a class="buy" href="mailto:mathurkh@mail.uc.edu?subject=Re%3A%20BarCat%20Deals">Ask about this</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="empty" id="empty" hidden>
-          <h3>No matches.</h3>
-          <p>Try a different word or category.</p>
-          <button type="button" class="buy" id="clear">Clear search and filters</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="contact__bg" aria-hidden="true"></div>
-      <div class="contact__inner">
-        <h2 class="contact__title">Let's talk.</h2>
-        <p class="contact__sub">Open to analyst roles starting May 2027.</p>
-        <a class="contact__mail glass" href="mailto:mathurkh@mail.uc.edu">mathurkh@mail.uc.edu</a>
-        <div class="contact__social">
-          <a class="glass" href="https://www.linkedin.com/in/kausmathur/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="./assets/linkedin.png" alt="" /></a>
-          <a class="glass" href="https://github.com/Kaustubh-Mathur" target="_blank" rel="noopener" aria-label="GitHub"><img src="./assets/github.png" alt="" /></a>
-          <a class="glass" href="mailto:mathurkh@mail.uc.edu" aria-label="Email"><img src="./assets/email.png" alt="" /></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer__grid">
-      <div class="footer__about">
-        <h4>Kaustubh Mathur</h4>
-        <p>Computer Science with a minor in Business Administration at the University of Cincinnati. Graduating May 2027.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<div class="main-nav">
+<a class="logo" href="#top">kaustubh<span>portfolio</span>
+</a>
+<a class="location" href="#about">
+<span>Based in</span>
+<strong>Cincinnati, OH</strong>
+</a>
+<form id="search-form" role="search">
+<label class="sr" for="search-category">Project category</label>
+<select id="search-category">
+<option value="all">All</option>
+<option value="data">Data</option>
+<option value="auto">Automation</option>
+<option value="bi">Dashboards</option>
+<option value="ai">AI</option>
+<option value="research">Research</option>
+<option value="school">School</option>
+</select>
+<label class="sr" for="search">Search portfolio</label>
+<input id="search" type="search" placeholder="Search Kaustubh’s projects" autocomplete="off">
+<button aria-label="Search projects" type="submit">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<circle cx="10" cy="10" r="6.5"/>
+<path d="m15 15 6 6"/>
+</svg>
+</button>
+</form>
+<a class="header-link" href="#about">
+<span>Hello, I’m Kaustubh</span>
+<strong>About & background</strong>
+</a>
+<a class="header-link availability" href="#contact">
+<span>Available from</span>
+<strong>May 2027</strong>
+</a>
+<button class="saved-button" id="saved-button">
+<span class="saved-count">0</span>
+<svg viewBox="0 0 28 28" aria-hidden="true">
+<path d="M7 3h14v23l-7-5-7 5z"/>
+</svg>
+<strong>Saved</strong>
+</button>
+</div>
+<nav class="sub-nav" aria-label="Main navigation">
+<button id="all-menu" aria-expanded="false">☰ &nbsp; All</button>
+<a href="#projects" data-category="all">All projects</a>
+<a href="#projects" data-category="data">Data engineering</a>
+<a href="#projects" data-category="auto">Automation</a>
+<a href="#projects" data-category="bi">Dashboards</a>
+<a href="#projects" data-category="ai">AI & research</a>
+<a href="#experience">Work history</a>
+<a href="#skills">Skills</a>
+<a href="#contact" class="sub-end">Let’s build something together</a>
+</nav>
+</header>
+<main id="main">
+<section class="hero" aria-label="Featured projects">
+<div class="hero-inner">
+<div class="hero-copy">
+<p class="hero-kicker">KAUSTUBH MATHUR · COMPUTER SCIENCE + BUSINESS</p>
+<h1 id="hero-title">Big ideas.<br>Real-world impact.</h1>
+<p id="hero-description">Explore the tools, pipelines, and analytics I build to make complex operations simpler.</p>
+<a id="hero-link" class="yellow-button" href="#projects">Explore my projects</a>
+</div>
+<div class="hero-photo">
+<img src="assets/profile-pic.jpeg" alt="Kaustubh Mathur">
+<div class="photo-label">
+<strong>Kaustubh Mathur</strong>
+<span>University of Cincinnati · Class of 2027</span>
+</div>
+</div>
+<div class="hero-result">
+<span>SELECTED IMPACT</span>
+<strong id="hero-metric">$19.1M</strong>
+<p id="hero-note">Q3 cost savings identified at Delta Air Lines</p>
+</div>
+</div>
+<button class="hero-prev" aria-label="Previous featured project">‹</button>
+<button class="hero-next" aria-label="Next featured project">›</button>
+<div class="hero-dots" aria-label="Choose featured project">
+<button aria-label="Featured overview" aria-pressed="true" data-slide="0">
+</button>
+<button aria-label="DE SCAN project" aria-pressed="false" data-slide="1">
+</button>
+<button aria-label="Bid shell automation" aria-pressed="false" data-slide="2">
+</button>
+</div>
+</section>
+<div class="home-content">
+<div class="notice">You’re viewing Kaustubh’s portfolio. Explore the work, save projects for later, or <a href="#contact">get in touch</a>.</div>
+<section class="discovery-grid" aria-label="Explore the portfolio">
+<article class="discovery">
+<h2>Explore by specialty</h2>
+<div class="category-grid">
+<a href="#projects" data-category="data">
+<span class="category-icon">SQL</span>
+<span>Data engineering</span>
+</a>
+<a href="#projects" data-category="auto">
+<span class="category-icon">Python</span>
+<span>Automation</span>
+</a>
+<a href="#projects" data-category="bi">
+<span class="category-icon">BI</span>
+<span>Dashboards</span>
+</a>
+<a href="#projects" data-category="ai">
+<span class="category-icon">AI</span>
+<span>Artificial intelligence</span>
+</a>
+</div>
+<a class="blue-link" href="#projects" data-category="all">See all projects</a>
+</article>
+<article class="discovery">
+<h2>Results that matter</h2>
+<div class="impact-stat">
+<strong>$19.1M</strong>
+<span>Q3 savings identified</span>
+</div>
+<div class="impact-stat">
+<strong>98% faster</strong>
+<span>Bid shell generation</span>
+</div>
+<div class="impact-stat">
+<strong>~70%</strong>
+<span>Less manual data processing</span>
+</div>
+<a class="blue-link" href="#experience">See the work behind the numbers</a>
+</article>
+<article class="discovery">
+<h2>Meet the person behind it</h2>
+<img class="about-preview" src="assets/about-pic.jpeg" alt="Kaustubh Mathur" loading="lazy">
+<p>CS student. Business thinker.<br>Formula 1 fan.</p>
+<a class="blue-link" href="#about">More about me</a>
+</article>
+<article class="discovery connect-card">
+<h2>Your next analyst?</h2>
+<p>Computer Science meets Business Administration.</p>
+<div class="available">
+<span>FULL-TIME OPPORTUNITIES</span>
+<strong>May 2027</strong>
+<p>Analytics · Data · Technology</p>
+</div>
+<a class="yellow-button" href="mailto:mathurkh@mail.uc.edu">Start a conversation</a>
+<div class="connect-links">
+<a href="https://www.linkedin.com/in/kausmathur/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://github.com/Kaustubh-Mathur" target="_blank" rel="noopener">GitHub</a>
+</div>
+</article>
+</section>
+<section class="shelf">
+<div class="section-heading">
+<h2>Featured work</h2>
+<a class="blue-link" href="#projects" data-category="all">Explore the collection</a>
+</div>
+<div id="featured" class="featured-row">
+</div>
+</section>
+<section id="projects" class="catalog">
+<div class="catalog-top">
+<div>
+<p>PORTFOLIO / PROJECT COLLECTION</p>
+<h2>Explore my projects</h2>
+</div>
+<button id="reset" class="outline-button">Clear filters</button>
+</div>
+<div class="catalog-layout">
+<aside class="filters">
+<h3>Browse by category</h3>
+<div id="category-filters">
+</div>
+<h3>Organization</h3>
+<label>
+<input type="checkbox" value="delta" name="org"> Delta Air Lines</label>
+<label>
+<input type="checkbox" value="uc" name="org"> University of Cincinnati</label>
+<label>
+<input type="checkbox" value="other" name="org"> Other projects</label>
+<h3>Tools & technologies</h3>
+<div id="tool-filters">
+</div>
+<h3>Your collection</h3>
+<label>
+<input type="checkbox" id="saved-only"> Saved projects only</label>
+</aside>
+<div class="catalog-results">
+<div class="results-toolbar">
+<p id="result-count" aria-live="polite">
+</p>
+<label>Sort by: <select id="sort">
+<option value="featured">Featured</option>
+<option value="az">Project name: A–Z</option>
+<option value="za">Project name: Z–A</option>
+</select>
+</label>
+</div>
+<div id="project-grid" class="project-grid">
+</div>
+<div id="empty" hidden>
+<h3>No matching projects</h3>
+<p>Try a different search or clear your filters.</p>
+<button class="yellow-button" id="empty-reset">Show all projects</button>
+</div>
+</div>
+</div>
+</section>
+<section id="about" class="about-section panel">
+<h2>About Kaustubh</h2>
+<div class="about-layout">
+<img src="assets/profile-pic.jpeg" alt="Kaustubh Mathur" loading="lazy">
+<div>
+<span class="small-label">COMPUTER SCIENCE × BUSINESS ANALYTICS</span>
+<h3>Technical foundation. Practical thinking.</h3>
+<p>I’m a Computer Science student at the University of Cincinnati with a Business Administration minor. My work connects data, technology, and the decisions people need to make.</p>
+<p>At Delta Air Lines, I’ve built automation and analytics for workforce operations. At UC, I’ve developed research data tools and supported engineering students as a teaching assistant.</p>
+<p>Outside work, I’m into Formula 1, the gym, and exploring emerging tech.</p>
+<a class="blue-link" href="https://www.linkedin.com/in/kausmathur/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+</div>
+<dl>
+<div>
+<dt>Education</dt>
+<dd>B.S. Computer Science</dd>
+</div>
+<div>
+<dt>Minor</dt>
+<dd>Business Administration</dd>
+</div>
+<div>
+<dt>University</dt>
+<dd>University of Cincinnati</dd>
+</div>
+<div>
+<dt>Graduation</dt>
+<dd>May 2027</dd>
+</div>
+<div>
+<dt>Location</dt>
+<dd>Cincinnati, Ohio</dd>
+</div>
+</dl>
+</div>
+</section>
+<section id="experience" class="panel experience">
+<h2>Work history</h2>
+<div id="job-content">
+<details class="job" open>
+        <summary>
+          <span class="job__logo">D</span>
+          <span class="job__head">
+<strong>Business Analyst Co-op</strong>
+<em>Delta Air Lines &middot; ACS Field Support</em>
+</span>
+          <span class="job__when">Aug 2024 &ndash; Aug 2026<br />Atlanta, GA &middot; three co-op rotations</span>
+        </summary>
+        <ul class="job__list">
+          <li>Built end-to-end pipelines that connect AWS databases to Python and Power BI, cutting manual data processing by about 70% and enabling near-real-time operational reporting.</li>
+          <li>Set up AWS S3 Tables and Apache Iceberg for lakehouse-style storage and backup, speeding up data retrieval for production analytics.</li>
+          <li>Developed an automated SAS pipeline that cleans HR and scheduling data and joins headcount to station-level records to derive weekly attrition trends. It feeds a Power BI semantic model that informed $2.3M a month in staffing cost savings.</li>
+          <li>Automated bid shell generation with a Python pipeline over scheduling data, cutting processing time by 98% (8&ndash;9 minutes to 5&ndash;10 seconds).</li>
+          <li>Built a Python pipeline that produces formatted Excel and PDF staffing reports for dozens of airport stations, with automated chart extraction and data-driven narrative, replacing a manual process for the whole team.</li>
+          <li>Analyzed Baggage AI post-deployment data, measuring a 30% improvement in baggage transfer efficiency, and built Python and Power BI pipelines that monitor station KPIs and surface regressions for ops teams.</li>
         </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="mailto:mathurkh@mail.uc.edu">mathurkh@mail.uc.edu</a></li>
-          <li><a href="https://www.linkedin.com/in/kausmathur/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://github.com/Kaustubh-Mathur" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="./assets/KaustubhMathur_ResumeFall2025.pdf" target="_blank" rel="noopener">Resume</a></li>
+      </details>
+<details class="job">
+        <summary>
+          <span class="job__logo">UC</span>
+          <span class="job__head">
+<strong>Undergraduate Research Assistant</strong>
+<em>University of Cincinnati</em>
+</span>
+          <span class="job__when">Jan 2024 &ndash; Aug 2024<br />Cincinnati, OH</span>
+        </summary>
+        <ul class="job__list">
+          <li>Built Python data quality tools that enforce field types, range checks and cross-table consistency rules across 1,000+ records, cutting manual entry errors by 60% and speeding integration for a 9-person research team.</li>
+          <li>Helped standardize engineering Plans of Study across the U.S.</li>
+          <li>Co-authored research papers and documented the work so others could reproduce it.</li>
         </ul>
-      </div>
-      <div>
-        <h4>Credentials</h4>
-        <ul>
-          <li>IBM Full Stack Software Developer</li>
-          <li>Google IT Automation with Python</li>
-          <li>Dean's List, six terms</li>
-          <li>CEAS International Outreach Scholar</li>
-          <li>National Co-op Ambassador</li>
+      </details>
+<details class="job">
+        <summary>
+          <span class="job__logo">UC</span>
+          <span class="job__head">
+<strong>Teaching Assistant</strong>
+<em>University of Cincinnati</em>
+</span>
+          <span class="job__when">Aug 2023 &ndash; Aug 2024<br />Cincinnati, OH</span>
+        </summary>
+        <ul class="job__list">
+          <li>Supported the Foundations of Engineering Design Thinking course and tutored 72 students.</li>
+          <li>Handled project questions between students and professors.</li>
+          <li>Trained 10 new TAs on course standards and lab safety.</li>
         </ul>
-      </div>
-    </div>
-    <div class="footer__base">
-      <p>&copy; <span id="year">2026</span> Kaustubh Mathur</p>
-      <a href="#top">Back to top</a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+      </details>
+</div>
+</section>
+<section id="skills" class="panel">
+<h2>Skills & credentials</h2>
+<div class="skills-layout">
+<div>
+<h3>Programming & data</h3>
+<p>Python · SQL · SAS · VBA · MATLAB · Teradata · HTML · JSON</p>
+</div>
+<div>
+<h3>Visualization & automation</h3>
+<p>Power BI · Tableau · Excel · Power Apps · Power Automate</p>
+</div>
+<div>
+<h3>IBM Full Stack Software Developer</h3>
+<p>HTML, CSS, JavaScript, React, Kubernetes and DevOps pipelines.</p>
+</div>
+<div>
+<h3>Google IT Automation with Python</h3>
+<p>Scripting, Git, cloud resources and automation.</p>
+</div>
+</div>
+</section>
+<section id="contact" class="contact panel">
+<h2>Let’s talk about what’s next.</h2>
+<p>Open to full-time roles starting May 2027 and conversations about analytics, automation, and technology.</p>
+<a class="yellow-button" href="mailto:mathurkh@mail.uc.edu">Email Kaustubh</a>
+<button id="copy-email" class="outline-button">Copy email address</button>
+<p class="email-address">mathurkh@mail.uc.edu</p>
+</section>
+</div>
+</main>
+<a class="back-top" href="#top">Back to top</a>
+<footer>
+<div class="footer-grid">
+<div>
+<h3>Get to know me</h3>
+<a href="#about">About Kaustubh</a>
+<a href="#experience">Work history</a>
+<a href="#skills">Skills & credentials</a>
+</div>
+<div>
+<h3>Explore the work</h3>
+<a href="#projects" data-category="data">Data engineering</a>
+<a href="#projects" data-category="auto">Automation</a>
+<a href="#projects" data-category="bi">Dashboards</a>
+<a href="#projects" data-category="ai">AI projects</a>
+</div>
+<div>
+<h3>Let’s connect</h3>
+<a href="mailto:mathurkh@mail.uc.edu">mathurkh@mail.uc.edu</a>
+<a href="https://www.linkedin.com/in/kausmathur/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://github.com/Kaustubh-Mathur" target="_blank" rel="noopener">GitHub</a>
+</div>
+<div>
+<h3>Looking ahead</h3>
+<p>University of Cincinnati<br>Class of 2027</p>
+<p>Analytics · Technology · Operations</p>
+</div>
+</div>
+<div class="footer-bottom">
+<a class="logo" href="#top">kaustubh<span>portfolio</span>
+</a>
+<p>© <span id="year">2026</span> Kaustubh Mathur · Personal portfolio</p>
+</div>
+</footer>
+<dialog id="project-dialog" aria-labelledby="dialog-title">
+<button class="close-dialog" aria-label="Close project details">×</button>
+<div id="dialog-content">
+</div>
+</dialog>
+<dialog id="nav-dialog" aria-labelledby="nav-title">
+<div class="drawer-heading">
+<h2 id="nav-title">Hello, explore my portfolio</h2>
+<button class="close-nav" aria-label="Close categories">×</button>
+</div>
+<h3>Projects by category</h3>
+<div id="drawer-categories">
+</div>
+<h3>More about Kaustubh</h3>
+<a href="#about">About & education</a>
+<a href="#experience">Work history</a>
+<a href="#skills">Skills & credentials</a>
+<a href="#contact">Contact</a>
+</dialog>
+<div id="toast" role="status">
+</div>
 </body>
 </html>
+
