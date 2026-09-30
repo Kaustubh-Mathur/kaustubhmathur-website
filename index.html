@@ -13,6 +13,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="lg-refract" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.014" numOctaves="2" seed="7" result="noise" />
+      <feGaussianBlur in="noise" stdDeviation="3" result="soft" />
+      <feDisplacementMap in="SourceGraphic" in2="soft" scale="16" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
 
   <header class="nav" id="nav">
     <div class="nav__inner">
@@ -34,6 +41,7 @@
 
     <!-- HERO -->
     <section class="hero" id="hero">
+      <div class="ambient" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
       <div class="hero__text">
         <p class="hero__hello">Kaustubh Mathur</p>
         <h1 class="hero__title">
@@ -42,11 +50,11 @@
         </h1>
         <p class="hero__sub">Computer Science and Business at the University of Cincinnati. I build the data pipelines, dashboards and AI-assisted tools that make analytics teams faster.</p>
         <div class="hero__cta">
-          <a class="pill pill--light" href="./assets/KaustubhMathur_ResumeFall2025.pdf" target="_blank" rel="noopener">Resume</a>
-          <a class="link" href="#contact">Get in touch &rsaquo;</a>
+          <a class="pill pill--tint glass" href="./assets/KaustubhMathur_ResumeFall2025.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="pill glass" href="#contact">Get in touch</a>
         </div>
       </div>
-      <div class="hero__photo" id="heroPhoto">
+      <div class="hero__photo glass" id="heroPhoto">
         <img src="./assets/profile-pic.jpeg" alt="Kaustubh Mathur in a grey suit" />
       </div>
     </section>
@@ -60,20 +68,21 @@
 
     <!-- NUMBERS -->
     <section class="numbers" aria-label="Impact">
+      <div class="ambient" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
       <dl class="numbers__grid">
-        <div>
+        <div class="glass">
           <dt><span class="count" data-to="98" data-suffix="%">98%</span></dt>
           <dd>less time to generate bid shells: 8&ndash;9 minutes down to 5&ndash;10 seconds</dd>
         </div>
-        <div>
+        <div class="glass">
           <dt><span class="count" data-to="2.3" data-prefix="$" data-suffix="M" data-dec="1">$2.3M</span></dt>
           <dd>a month in staffing cost savings, informed by an automated SAS pipeline</dd>
         </div>
-        <div>
+        <div class="glass">
           <dt><span class="count" data-to="19.1" data-prefix="$" data-suffix="M" data-dec="1">$19.1M</span></dt>
           <dd>in Q3 cost savings identified by a scenario planning tool</dd>
         </div>
-        <div>
+        <div class="glass">
           <dt><span class="count" data-to="30" data-suffix="%">30%</span></dt>
           <dd>better baggage transfer efficiency, measured after Baggage AI went live</dd>
         </div>
@@ -82,15 +91,17 @@
 
     <!-- ABOUT -->
     <section class="light about" id="about">
+      <div class="ambient ambient--light" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
       <div class="wrap about__grid">
         <div class="about__photo">
           <img src="./assets/about-pic.jpeg" alt="Kaustubh Mathur smiling at a restaurant table" loading="lazy" />
+          <span class="chip glass">Graduating May 2027</span>
         </div>
         <div class="about__body">
           <h2 class="h2">Numbers are the start. Operations are the point.</h2>
           <p class="lead">I'm a senior studying Computer Science with a minor in Business Administration, graduating in May 2027. I like problems where a spreadsheet, a query and a good question can change how a whole team works.</p>
           <p class="lead">I've spent more than two years across co-op, research and teaching, and the through-line is the same: find the slow, manual step and replace it with something reliable.</p>
-          <dl class="facts">
+          <dl class="facts glass glass--light">
             <div><dt>Studying</dt><dd>B.S. Computer Science, minor in Business Administration</dd></div>
             <div><dt>Recognition</dt><dd>Dean's List six terms, CEAS International Outreach Scholar, National Co-op Ambassador</dd></div>
             <div><dt>Working on</dt><dd>Data pipelines, lakehouse storage and AI-assisted change tracking</dd></div>
@@ -102,11 +113,12 @@
 
     <!-- EXPERIENCE -->
     <section class="light light--alt experience" id="experience">
+      <div class="ambient ambient--light" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
       <div class="wrap">
         <h2 class="h2 h2--center">Where I've worked.</h2>
 
         <ol class="timeline">
-          <li class="job">
+          <li class="job glass glass--light">
             <div class="job__meta">
               <h3>Business Analyst Co-op</h3>
               <p class="job__org">Delta Air Lines &middot; ACS Field Support</p>
@@ -122,7 +134,7 @@
             </ul>
           </li>
 
-          <li class="job">
+          <li class="job glass glass--light">
             <div class="job__meta">
               <h3>Research Assistant</h3>
               <p class="job__org">University of Cincinnati</p>
@@ -135,7 +147,7 @@
             </ul>
           </li>
 
-          <li class="job">
+          <li class="job glass glass--light">
             <div class="job__meta">
               <h3>Teaching Assistant</h3>
               <p class="job__org">University of Cincinnati</p>
@@ -153,9 +165,10 @@
 
     <!-- SKILLS -->
     <section class="dark skills" id="skills">
+      <div class="ambient" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
       <div class="wrap">
         <h2 class="h2 h2--center">What I build with.</h2>
-        <div class="stack">
+        <div class="stack glass">
           <div class="stack__row"><h3>Programming and databases</h3><p>Python, SQL, SAS, Teradata, VBA, MATLAB</p></div>
           <div class="stack__row"><h3>Data engineering and cloud</h3><p>ETL and ELT pipelines, data modeling, AWS, Apache Iceberg, Microsoft Fabric</p></div>
           <div class="stack__row"><h3>BI and reporting</h3><p>Power BI with semantic models and DAX, Tableau, Excel, Streamlit</p></div>
@@ -165,11 +178,11 @@
         <div class="certs">
           <h3 class="certs__title">Certifications</h3>
           <div class="certs__grid">
-            <div>
+            <div class="glass">
               <h4>IBM Full Stack Software Developer</h4>
               <p>HTML, CSS, JavaScript, React, Kubernetes and DevOps pipelines.</p>
             </div>
-            <div>
+            <div class="glass">
               <h4>Google IT Automation with Python</h4>
               <p>Scripting, Git, cloud resource management and troubleshooting automation.</p>
             </div>
@@ -180,10 +193,11 @@
 
     <!-- PROJECTS -->
     <section class="light projects" id="projects">
+      <div class="ambient ambient--light" aria-hidden="true"><i class="orb orb--a"></i><i class="orb orb--b"></i><i class="orb orb--c"></i></div>
       <div class="wrap">
         <h2 class="h2 h2--center">Recent work.</h2>
 
-        <article class="project project--scan tilt">
+        <article class="project project--scan glass glass--light tilt">
           <div class="project__copy">
             <p class="project__meta">Python, LLM agents &middot; July 2026</p>
             <h3>DE SCAN</h3>
@@ -208,7 +222,7 @@
           </div>
         </article>
 
-        <article class="project project--neural tilt">
+        <article class="project project--neural glass glass--light tilt">
           <div class="project__stat" aria-hidden="true">
             <svg viewBox="0 0 400 140" class="wave" preserveAspectRatio="none">
               <path class="wave__a" d="M0 70 C 30 10, 60 130, 90 70 S 150 10, 180 70 S 240 130, 270 70 S 330 10, 400 70" />
@@ -230,11 +244,11 @@
       <div class="contact__inner">
         <h2 class="contact__title">Let's talk.</h2>
         <p class="contact__sub">Open to analyst roles starting May 2027.</p>
-        <a class="contact__mail" href="mailto:mathurkh@mail.uc.edu">mathurkh@mail.uc.edu</a>
+        <a class="contact__mail glass" href="mailto:mathurkh@mail.uc.edu">mathurkh@mail.uc.edu</a>
         <div class="contact__social">
-          <a href="https://www.linkedin.com/in/kausmathur/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="./assets/linkedin.png" alt="" /></a>
-          <a href="https://github.com/Kaustubh-Mathur" target="_blank" rel="noopener" aria-label="GitHub"><img src="./assets/github.png" alt="" /></a>
-          <a href="mailto:mathurkh@mail.uc.edu" aria-label="Email"><img src="./assets/email.png" alt="" /></a>
+          <a class="glass" href="https://www.linkedin.com/in/kausmathur/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="./assets/linkedin.png" alt="" /></a>
+          <a class="glass" href="https://github.com/Kaustubh-Mathur" target="_blank" rel="noopener" aria-label="GitHub"><img src="./assets/github.png" alt="" /></a>
+          <a class="glass" href="mailto:mathurkh@mail.uc.edu" aria-label="Email"><img src="./assets/email.png" alt="" /></a>
         </div>
       </div>
     </section>
