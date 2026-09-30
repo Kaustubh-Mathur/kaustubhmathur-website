@@ -1,317 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaustubh Mathur | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="icon" href="./assets/favicon.jpg" type="image/x-icon" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Kaustubh Mathur</title>
+  <meta name="description" content="Kaustubh Mathur — Computer Science and Business student at the University of Cincinnati. Analytics and automation at Delta Air Lines." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="./assets/favicon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <body>
-    <!-- NAVIGATION -->
-    <nav id="desktop-nav">
-      <div class="logo">Kaustubh Mathur</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#certification">Certifications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__name">Kaustubh Mathur</a>
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-    <!-- PROFILE SECTION -->
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.jpg" alt="Kaustubh Mathur profile" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Kaustubh Mathur</h1>
-        <p class="section__text__p2">
-          Junior | Computer Science @ University of Cincinnati
-        </p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/KaustubhMathur_ResumeFall2025.pdf')"
-          >
-            Resume
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__text">
+        <p class="hero__hello">Kaustubh Mathur</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Messy operations data.</span></span>
+          <span class="line"><span>Clear decisions.</span></span>
+        </h1>
+        <p class="hero__sub">Computer Science and Business at the University of Cincinnati. I build the data pipelines, dashboards and AI-assisted tools that make analytics teams faster.</p>
+        <div class="hero__cta">
+          <a class="pill pill--light" href="./assets/KaustubhMathur_ResumeFall2025.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="link" href="#contact">Get in touch &rsaquo;</a>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            class="icon"
-            alt="LinkedIn"
-            onclick="location.href='https://www.linkedin.com/in/kausmathur/'"
-          />
-          <img
-            src="./assets/github.png"
-            class="icon"
-            alt="GitHub"
-            onclick="location.href='https://github.com/Kaustubh-Mathur'"
-          />
+      </div>
+      <div class="hero__photo" id="heroPhoto">
+        <img src="./assets/profile-pic.jpg" alt="Kaustubh Mathur in a grey suit" />
+      </div>
+    </section>
+
+    <!-- STATEMENT -->
+    <section class="story" id="story">
+      <div class="story__sticky">
+        <p class="story__text lit" id="lit">At Delta Air Lines I built the pipelines nobody should have to run by hand. A bid shell that took nine minutes now takes seconds. Attrition trends assemble themselves every week. Baggage performance is tracked station by station, and the savings run into the millions.</p>
+      </div>
+    </section>
+
+    <!-- NUMBERS -->
+    <section class="numbers" aria-label="Impact">
+      <dl class="numbers__grid">
+        <div>
+          <dt><span class="count" data-to="98" data-suffix="%">98%</span></dt>
+          <dd>less time to generate bid shells: 8&ndash;9 minutes down to 5&ndash;10 seconds</dd>
+        </div>
+        <div>
+          <dt><span class="count" data-to="2.3" data-prefix="$" data-suffix="M" data-dec="1">$2.3M</span></dt>
+          <dd>a month in staffing cost savings, informed by an automated SAS pipeline</dd>
+        </div>
+        <div>
+          <dt><span class="count" data-to="19.1" data-prefix="$" data-suffix="M" data-dec="1">$19.1M</span></dt>
+          <dd>in Q3 cost savings identified by a scenario planning tool</dd>
+        </div>
+        <div>
+          <dt><span class="count" data-to="30" data-suffix="%">30%</span></dt>
+          <dd>better baggage transfer efficiency, measured after Baggage AI went live</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="light about" id="about">
+      <div class="wrap about__grid">
+        <div class="about__photo">
+          <img src="./assets/about-pic.jpg" alt="Kaustubh Mathur smiling at a restaurant table" loading="lazy" />
+        </div>
+        <div class="about__body">
+          <h2 class="h2">Numbers are the start. Operations are the point.</h2>
+          <p class="lead">I'm a senior studying Computer Science with a minor in Business Administration, graduating in May 2027. I like problems where a spreadsheet, a query and a good question can change how a whole team works.</p>
+          <p class="lead">I've spent more than two years across co-op, research and teaching, and the through-line is the same: find the slow, manual step and replace it with something reliable.</p>
+          <dl class="facts">
+            <div><dt>Studying</dt><dd>B.S. Computer Science, minor in Business Administration</dd></div>
+            <div><dt>Recognition</dt><dd>Dean's List six terms, CEAS International Outreach Scholar, National Co-op Ambassador</dd></div>
+            <div><dt>Working on</dt><dd>Data pipelines, lakehouse storage and AI-assisted change tracking</dd></div>
+            <div><dt>Off the clock</dt><dd>Formula 1, the gym, and whatever new tech I'm poking at</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about">
-      <p class="section__text__p1">Get to Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img src="./assets/about-pic.jpg" class="about-pic" alt="About" />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img src="./assets/experience.png" class="icon" alt="Experience" />
-              <h3>Experience</h3>
-              <p>2+ Years<br />Co-op | Research | Teaching</p>
+    <!-- EXPERIENCE -->
+    <section class="light light--alt experience" id="experience">
+      <div class="wrap">
+        <h2 class="h2 h2--center">Where I've worked.</h2>
+
+        <ol class="timeline">
+          <li class="job">
+            <div class="job__meta">
+              <h3>Business Analyst Co-op</h3>
+              <p class="job__org">Delta Air Lines &middot; ACS Field Support</p>
+              <p class="job__when">Aug 2024 &ndash; Aug 2026<br />Atlanta, GA &middot; three co-op rotations</p>
             </div>
-            <div class="details-container">
-              <img src="./assets/education.png" class="icon" alt="Education" />
-              <h3>Education</h3>
-              <p>
-                B.S. Computer Science<br />Minor – Business Administration
-              </p>
+            <ul class="job__list">
+              <li>Built end-to-end pipelines that connect AWS databases to Python and Power BI, cutting manual data processing by about 70% and enabling near-real-time operational reporting.</li>
+              <li>Set up AWS S3 Tables and Apache Iceberg for lakehouse-style storage and backup, speeding up data retrieval for production analytics.</li>
+              <li>Developed an automated SAS pipeline that cleans HR and scheduling data and joins headcount to station-level records to derive weekly attrition trends. It feeds a Power BI semantic model that informed $2.3M a month in staffing cost savings.</li>
+              <li>Automated bid shell generation with a Python pipeline over scheduling data, cutting processing time by 98% (8&ndash;9 minutes to 5&ndash;10 seconds).</li>
+              <li>Built a Python pipeline that produces formatted Excel and PDF staffing reports for dozens of airport stations, with automated chart extraction and data-driven narrative, replacing a manual process for the whole team.</li>
+              <li>Analyzed Baggage AI post-deployment data, measuring a 30% improvement in baggage transfer efficiency, and built Python and Power BI pipelines that monitor station KPIs and surface regressions for ops teams.</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job__meta">
+              <h3>Research Assistant</h3>
+              <p class="job__org">University of Cincinnati</p>
+              <p class="job__when">Jan 2024 &ndash; Aug 2024<br />Cincinnati, OH</p>
+            </div>
+            <ul class="job__list">
+              <li>Built Python data quality tools that enforce field types, range checks and cross-table consistency rules across 1,000+ records, cutting manual entry errors by 60% and speeding integration for a 9-person research team.</li>
+              <li>Helped standardize engineering Plans of Study across the U.S.</li>
+              <li>Co-authored research papers and documented the work so others could reproduce it.</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job__meta">
+              <h3>Teaching Assistant</h3>
+              <p class="job__org">University of Cincinnati</p>
+              <p class="job__when">Aug 2023 &ndash; Aug 2024<br />Cincinnati, OH</p>
+            </div>
+            <ul class="job__list">
+              <li>Supported the Foundations of Engineering Design Thinking course and tutored 72 students.</li>
+              <li>Handled project questions between students and professors.</li>
+              <li>Trained 10 new TAs on course standards and lab safety.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="dark skills" id="skills">
+      <div class="wrap">
+        <h2 class="h2 h2--center">What I build with.</h2>
+        <div class="stack">
+          <div class="stack__row"><h3>Programming and databases</h3><p>Python, SQL, SAS, Teradata, VBA, MATLAB</p></div>
+          <div class="stack__row"><h3>Data engineering and cloud</h3><p>ETL and ELT pipelines, data modeling, AWS, Apache Iceberg, Microsoft Fabric</p></div>
+          <div class="stack__row"><h3>BI and reporting</h3><p>Power BI with semantic models and DAX, Tableau, Excel, Streamlit</p></div>
+          <div class="stack__row"><h3>Automation and collaboration</h3><p>Power Automate, Power Apps, SharePoint</p></div>
+        </div>
+
+        <div class="certs">
+          <h3 class="certs__title">Certifications</h3>
+          <div class="certs__grid">
+            <div>
+              <h4>IBM Full Stack Software Developer</h4>
+              <p>HTML, CSS, JavaScript, React, Kubernetes and DevOps pipelines.</p>
+            </div>
+            <div>
+              <h4>Google IT Automation with Python</h4>
+              <p>Scripting, Git, cloud resource management and troubleshooting automation.</p>
             </div>
           </div>
-          <div class="text-container">
-            <p style="text-align: justify;">
-              I’m a Computer Science student passionate about solving complex
-              operational challenges using data. At Delta Air Lines, I automated
-              business analytics processes that reduced processing times by over
-              90% and enabled multimillion-dollar savings. As a Research and
-              Teaching Assistant at the University of Cincinnati, I built
-              Python-based data validation tools and mentored 70+ students in
-              engineering design. Outside academics, I’m fond of watching
-              Formula 1, love going to the gym, and also love exploring emerging
-              tech.
-            </p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience">
-      <p class="section__text__p1">My Professional Journey</p>
-      <h1 class="title">Experience</h1>
+    <!-- PROJECTS -->
+    <section class="light projects" id="projects">
+      <div class="wrap">
+        <h2 class="h2 h2--center">Recent work.</h2>
 
-      <div class="experience-details-container">
-        <div class="details-container">
-          <h2>Delta Air Lines — Operational Business Analyst Co-op</h2>
-          <p><i>Aug 2024 – Present | Atlanta, GA</i></p>
+        <article class="project project--scan tilt">
+          <div class="project__copy">
+            <p class="project__meta">Python, LLM agents &middot; July 2026</p>
+            <h3>DE SCAN</h3>
+            <p>An AI-assisted change impact assessment. Agent-based workflows catch upstream data-source changes before they break anything downstream, then map each change to the assets it touches across four metadata sources. Confidence scores, risk classes and human review checkpoints keep people in the loop.</p>
+          </div>
+          <div class="project__stat" aria-hidden="true">
+            <div class="scanline"></div>
+            <div class="stat"><span>30 of 30</span><small>real pipeline-breaking changes flagged in validation</small></div>
+            <div class="stat"><span>Every 6 hrs</span><small>unattended, across about 25 change requests a day</small></div>
+          </div>
+        </article>
 
-          <ul>
-            <li>
-              Automated bid shell creation using Python, reducing processing
-              time from 8–9 minutes to 5–10 seconds and increasing team
-              productivity by over 90%.
-            </li>
-            <li>
-              Developed an automated SAS process that generates weekly reports
-              integrated into a semantic model, enabling data-driven staffing
-              targets and saving up to $2.3M per month.
-            </li>
-            <li>
-              Integrated AWS databases with Python and Power BI to streamline
-              data pipelines, reducing manual processing time by approximately
-              70%.
-            </li>
-            <li>
-              Designed a post-bid analysis dashboard in Power BI that provides
-              senior leaders with real-time visibility into staffing metrics.
-            </li>
-          </ul>
-        </div>
+        <article class="project project--risk tilt">
+          <div class="project__copy">
+            <p class="project__meta">Delta Air Lines &middot; Aug 2025</p>
+            <h3>Risk Escalation Assessment Tool</h3>
+            <p>Requirements gathered with operations and finance stakeholders, turned into an Excel scenario planning and risk tool. An interactive dashboard lets leadership weigh workforce utilization, financial coverage and resource trade-offs in real time.</p>
+          </div>
+          <div class="project__stat" aria-hidden="true">
+            <span>$19.1M</span>
+            <small>in Q3 cost savings identified</small>
+          </div>
+        </article>
 
-        <div class="details-container">
-          <h2>University of Cincinnati — Research Assistant</h2>
-          <p><i>Jan 2024 – Aug 2024 | Cincinnati, OH</i></p>
-
-          <ul>
-            <li>
-              Collaborated with a team of nine researchers and mentors to
-              standardize Plans of Study (POS) for engineering curriculum across
-              the U.S.
-            </li>
-            <li>
-              Built Python-based validation tools to enhance data integrity,
-              reducing manual errors by 60% and improving integration for 1,000+
-              records.
-            </li>
-            <li>
-              Co-authored research papers and enhanced documentation for
-              reproducibility of academic work.
-            </li>
-          </ul>
-        </div>
-
-        <div class="details-container">
-          <h2>University of Cincinnati — Teaching Assistant</h2>
-          <p><i>Aug 2023 – Aug 2024 | Cincinnati, OH</i></p>
-
-          <ul>
-            <li>
-              Assisted professor in teaching and supervising students for the
-              Foundations of Engineering Design Thinking course.
-            </li>
-            <li>
-              Tutored 72 students and managed communications between students
-              and professors for project-related queries.
-            </li>
-            <li>
-              Led onboarding and training for 10 new TAs, ensuring course
-              consistency and lab safety compliance.
-            </li>
-          </ul>
-        </div>
+        <article class="project project--neural tilt">
+          <div class="project__stat" aria-hidden="true">
+            <svg viewBox="0 0 400 140" class="wave" preserveAspectRatio="none">
+              <path class="wave__a" d="M0 70 C 30 10, 60 130, 90 70 S 150 10, 180 70 S 240 130, 270 70 S 330 10, 400 70" />
+              <path class="wave__b" d="M0 70 C 40 30, 70 110, 110 70 S 170 30, 210 70 S 270 110, 310 70 S 360 30, 400 70" />
+            </svg>
+          </div>
+          <div class="project__copy">
+            <p class="project__meta">University of Cincinnati &middot; Dec 2024</p>
+            <h3>Neural Interface Analytics</h3>
+            <p>Predictive models built in Python and SQLite that read signal behavior from neural interface data and forecast device performance. The findings went into a technical report that guided ongoing analytics work.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section id="skills">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2>Programming & Databases</h2>
-            <p>Python · SQL · HTML · JSON · VBA · MATLAB · Teradata</p>
-          </div>
-          <div class="details-container">
-            <h2>Visualization & Automation</h2>
-            <p>Power BI · Tableau · Excel · Power Apps · Power Automate</p>
-          </div>
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="contact__bg" aria-hidden="true"></div>
+      <div class="contact__inner">
+        <h2 class="contact__title">Let's talk.</h2>
+        <p class="contact__sub">Open to analyst roles starting May 2027.</p>
+        <a class="contact__mail" href="mailto:mathurkh@mail.uc.edu">mathurkh@mail.uc.edu</a>
+        <div class="contact__social">
+          <a href="https://www.linkedin.com/in/kausmathur/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="./assets/linkedin.png" alt="" /></a>
+          <a href="https://github.com/Kaustubh-Mathur" target="_blank" rel="noopener" aria-label="GitHub"><img src="./assets/github.png" alt="" /></a>
+          <a href="mailto:mathurkh@mail.uc.edu" aria-label="Email"><img src="./assets/email.png" alt="" /></a>
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- CERTIFICATION SECTION -->
-    <section id="certification">
-      <p class="section__text__p1">Achieved Certifications</p>
-      <h1 class="title">Certifications</h1>
-      <div class="certification-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2>IBM Full Stack Software Developer</h2>
-            <p>
-              Mastered full-stack development tools including HTML, CSS, JS,
-              React, Kubernetes, and DevOps pipelines.
-            </p>
-          </div>
-          <div class="details-container">
-            <h2>Google IT Automation with Python</h2>
-            <p>
-              Gained hands-on expertise in scripting, Git, cloud resource
-              management, and troubleshooting automation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> Kaustubh Mathur</p>
+    <a href="#top">Back to top</a>
+  </footer>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects">
-      <p class="section__text__p1">Recent Work</p>
-      <h1 class="title">Projects</h1>
-
-      <div class="about-containers">
-        <!-- Risk Escalation Assessment Tool -->
-        <div class="details-container color-container">
-
-          <div class="tenor-gif-embed" data-postid="26415193" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/spider-man2-spider-man-spider-man2train-fight-tobey-maguire-train-fight-gif-26415193">Spider Man2 Spider Man2train Fight GIF</a>from <a href="https://tenor.com/search/spider+man2-gifs">Spider Man2 GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
-          <h2>Risk Escalation Assessment Tool</h2>
-          <p><i>Aug 2025 | Delta Air Lines, Inc.</i></p>
-          <p style="text-align: justify;">
-            At Delta Air Lines, I developed a comprehensive risk assessment tool
-            to identify operational inefficiencies and financial gaps. By
-            leveraging Excel automation and scenario modeling, the tool helped
-            streamline workforce analysis and enabled leadership to make
-            data-driven decisions. The project generated over $19 million in
-            quarterly cost savings and improved visibility into performance
-            metrics across departments.
-          </p>
-        </div>
-
-        <!-- Neural Interface Analytics -->
-        <div class="details-container color-container">
-          <div
-            class="tenor-gif-embed"
-            data-postid="15282725986771945261"
-            data-share-method="host"
-            data-aspect-ratio="1.88679"
-            data-width="100%"
-          >
-            <a
-              href="https://tenor.com/view/spiderman-electro-meme-brainrot-spiderman-2-gif-15282725986771945261"
-              >Spiderman Electro GIF</a
-            >
-            from
-            <a href="https://tenor.com/search/spiderman-gifs">Spiderman GIFs</a>
-          </div>
-
-          <h2>Neural Interface Analytics</h2>
-          <p><i>Dec 2024 | University of Cincinnati</i></p>
-          <p style="text-align: justify;">
-            This project analyzed neural interface data to predict device
-            performance and support biomedical research outcomes. Using Python
-            and SQLite, I built predictive models that identified patterns in
-            signal behavior and delivered insights to improve device accuracy.
-            The findings were presented in a technical report that informed
-            ongoing neural analytics development.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            class="icon contact-icon"
-            alt="Email"
-          />
-          <p><a href="mailto:mathurkh@mail.uc.edu">mathurkh@mail.uc.edu</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            class="icon contact-icon"
-            alt="LinkedIn"
-          />
-          <p>
-            <a href="https://www.linkedin.com/in/kausmathur/">LinkedIn</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <p>© 2025 Kaustubh Mathur. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Tenor Embed Script -->
-    <script
-      type="text/javascript"
-      async
-      src="https://tenor.com/embed.js"
-    ></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
